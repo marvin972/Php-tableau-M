@@ -99,7 +99,13 @@ foreach($ages as $key => $value){
     echo $key . ' a ' . $value . ' ans<br>';
 }
 
-
+$html = '<ul>';
+foreach($ages as $key => $value){
+    // $html .= '<li>' . $key . ' a ' .$value. ' ans</li>';
+    $html .= "<li> $key a $value ans</li>";
+}
+$html .= '</ul>';
+echo $html;
 
 ?>
 </main>
