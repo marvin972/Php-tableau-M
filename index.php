@@ -56,6 +56,51 @@ for ($j = 0; $j < count($notes) ; $j++ ) {
 }
 $moyNotes = $totalNote / count($notes);
 echo $moyNotes;
+
+echo "<hr>";
+
+foreach ($notes as $note) {
+    echo $note . "<br>";
+}
+
+////////////////////////////////
+// Tableau Associatif
+////////////////////////////////
+
+$fruits = ['banane' => 'jaune' , 'pomme' => 'rouge' , 'kiwi' => 'vert'];
+
+debug($fruits);
+
+echo 'la couleur de la pomme est ' .$fruits['pomme'];
+echo "<hr>";
+
+echo 'La longueur du tableau $fruits est de : ' .sizeof($fruits);
+
+echo "<hr>";
+
+$ages = [
+    'Michel' => 34,
+    'Lucie' => 12,
+    'Lucie' => 24,
+    'Jean' => 56
+];
+$chaine = implode('-',$ages);
+echo $chaine;
+
+$age2 = explode('-',$chaine);
+debug($age2);
+
+$ages ['paul'] =33;
+$ages ['lucie'] = 02;
+debug($ages);
+
+
+foreach($ages as $key => $value){
+    echo $key . ' a ' . $value . ' ans<br>';
+}
+
+
+
 ?>
 </main>
 <?php
