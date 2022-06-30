@@ -40,3 +40,15 @@ foreach ($tableaux as $tableau) {
         }
     }
     utilisateurs($users);
+
+    $nombres = [ 4 , 15 , 2 , 145 , 42 , 5 , 75 , 12 ];
+    $nbr= $nombres[0];
+    foreach ($nombres as $nombre) {
+        if ($nombre > $nbr) {
+            $nbr = $nombre;
+        }
+        echo"[$nombre] , ";
+    }
+    echo("valeur la plus grande : $nbr");
+    // echo max($nombres);
+
