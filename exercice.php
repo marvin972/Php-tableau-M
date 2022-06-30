@@ -16,3 +16,27 @@ foreach ($tableaux as $tableau) {
         </li>
         <?php } ?>
     </ul>
+
+    <?php
+
+    $users = [
+        "firstname" => "Mike",
+        "lastname" => "Olganh",
+        "pseudo" => "",
+        "age" => 34,
+        "food" => "",
+        "sport" => "",
+
+    ];
+     
+    function utilisateurs($i){
+        foreach($i as $key => $value){
+            if($value == NULL){
+                echo "<li>$key : Aucun resultat </li>";
+            }else{
+                echo "<li> $key : $value </li>";
+            }
+        
+        }
+    }
+    utilisateurs($users);
