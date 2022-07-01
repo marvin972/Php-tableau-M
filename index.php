@@ -171,8 +171,39 @@ $peoples = [
     ]
     ];
 
-    echo "Le nom de Lucie est $peoples[1] ['nom']";
-    ?>
+//     echo "Le nom de Lucie est" . $peoples[1] ['nom'];
+// debug($peoples);
+
+// $json_peoples = json_encode($peoples);
+
+// debug($json_peoples);
+
+$json_peoples = '[{
+    "nom" : "Durand",
+    "prenom" : "Jean",
+    "age" : "20",
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" :  "https://ximg.es/64x64/000/fff"
+
+},{
+    "nom" : "Vilko",
+    "prenom" : "Anny",
+    "age" : "45",
+    "couleur" : ["marron", "noir", "violet"],
+    "image" :  "https://ximg.es/64x64/000/fff"
+}]';
+
+
+debug($json_peoples);
+
+$peoples_array_php = json_decode($json_peoples);
+
+debug($peoples_array_php);
+
+// echo '<img src="' . $peoples_array_php[1]['image'] . '" alt="Anny">'; 
+?>
+<img src="<?=$peoples_array_php[1]['image']?>"alt="<?=$peoples_array_php[1]['prenom']?>">; 
+
 
 
 </main>

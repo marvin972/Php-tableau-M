@@ -52,3 +52,11 @@ foreach ($tableaux as $tableau) {
     echo("valeur la plus grande : $nbr");
     // echo max($nombres);
 
+    echo "<hr>";
+
+
+    $userss = file_get_contents("./data/users.json");
+
+    echo($userss);
+
+    
