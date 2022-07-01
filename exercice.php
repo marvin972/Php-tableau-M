@@ -58,5 +58,49 @@ foreach ($tableaux as $tableau) {
     $userss = file_get_contents("./data/users.json");
 
     echo($userss);
+    $tabUtilisateur= json_decode($userss,true);
 
+    // dump($tabusers);
+    
+    // print_r( $tabusers["results"]);
+    echo "<hr>";
+
+
+    $resultats=  $tabUtilisateur["results"];
+    ?>
+    <div class="container">
+<?php
+
+foreach( $resultats as $resultat){ 
+
+    echo"<div class='users'>".
+
+    "<img src= ".$resultat["picture"]["large"].">".
+    
+    "<p>"."Nom : " . $resultat["name"]["last"] ."</p>".
+    "<p>"."Prenom : " .$resultat["name"]["first"]."</p>".
+    
+    "<p>"."Mail : ".$resultat["email"]."</p>".
+    "<p>"."Age : ".$resultat["dob"]["age"]."</p>".
+    "<p>"."Ville : " .$resultat["location"]["city"]."</p>".
+    "<p>"."Tel : ".$resultat["phone"]."</p>".
+    
+
+"</div>";
+};
+
+?>
+    </div>
+
+    <style>
+        .container {
+            margin-top: 15px;
+            display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+        }
+    </style>
     
