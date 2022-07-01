@@ -3,7 +3,7 @@ include './includes/header.php';
 include './includes/fonctions.php';
 ?>
 <main>
-<?php
+    <?php
 $tableau = array();
 $tableau = [];
 $tableau = [true,45,'Terre',[45,46,47]];
@@ -99,9 +99,65 @@ foreach($ages as $key => $value){
     echo $key . ' a ' . $value . ' ans<br>';
 }
 
+$html = '<ul>';
+foreach($ages as $key => $value){
+    // $html .= '<li>' . $key . ' a ' .$value. ' ans</li>';
+    $html .= "<li> $key a $value ans</li>";
+}
+$html .= '</ul>';
+echo $html;
+
+$planetes = [ 'mars', 'terre', 'pluton', 'venus', 'jupiter'];
+
+asort($planetes);
+asort($ages);
+
+debug($planetes);
+debug($ages);
+
+$tab = [
+    'voiture' => 'ford',
+    'nombre' => [1, 2, 3, 4],
+    'planete' => ['mars', 'terre']
+];
+
+debug($tab['nombre'][0]);
+
+echo "<hr>";
+
+$tab3 = [];
+$tab3[] = ['A' , 'B' , 'C'];
+$tab3[] = ['S' , 'U' , 'V'];
+$tab3[] = ['O' , 'U' , 'E' , 'I'];
+
+
+    debug($tab3[2][2].$tab3[1][0].$tab3[0][2].$tab3[0][2].$tab3[2][3]); 
+
+    $produits = [
+        ['nom' => 'chausette' , 'prix' => '10'],
+        ['nom' => 'velo' , 'prix' => '500'],
+        ['nom' => 'carotte', 'prix' => ' 2'],
+        ['nom' => 'boulon', 'prix' =>'9'],
+    ];
 
 
 ?>
+
+    <ul>
+        <?php
+foreach ($produits as $produit) {
+
+?>
+        <li>
+            <?php echo $produit['nom'] . ' : ' . $produit['prix'] . ' € ';?>
+            
+            <?=$produit['nom']?> : <?=$produit['prix']?> €
+        </li>
+        <?php } ?>
+    </ul>
+
+
+
 </main>
 <?php
 include './includes/footer.php';
