@@ -156,6 +156,23 @@ foreach ($produits as $produit) {
         <?php } ?>
     </ul>
 
+<?php
+
+$peoples = [
+    [
+        'nom' => 'Pierre',
+        'prenom' => 'Jean',
+        'email' => 'pije@gmail.com'
+    ],
+    [
+        'nom' => 'Lucie',
+        'prenom' => 'Dupont',
+        'email' => 'ludu@gmail.com'
+    ]
+    ];
+
+    echo "Le nom de Lucie est $peoples[1] ['nom']";
+    ?>
 
 
 </main>
